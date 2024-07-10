@@ -31,12 +31,10 @@ jobs:
       - name: Run Test Frontend
         run: docker-compose -f docker/docker-test.yml exec -T server robot -d robot/result robot/testcases/Login.robot
 
-      - uses: actions/upload-artifact@v4
-        if: ${{ !cancelled() }}
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
         with:
-          name: robot/result
-          path: output/
-          retention-days: 30
-          overwrite: true
+          name: result-artifact
+          path: output/report.html
 #       docker-compose -f docker/docker-build.yml up -d --build
 #       docker-compose -f docker/docker-build.yml run --rm server sh -c "npm run migration && npm run seed"
