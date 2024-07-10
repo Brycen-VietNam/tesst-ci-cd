@@ -30,9 +30,4 @@ services:
     depends_on:
       - db
       - cache
-    volumes:
-      - reports:/app/robot/result
     command: npm run start:prod
-
-volumes:
-  reports:
