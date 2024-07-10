@@ -31,5 +31,7 @@ services:
       - db
       - cache
     volumes:
-      $(pwd)/output:/app/robot/result
+      - reports:/app/robot/result
     command: npm run start:prod
+volumes:
+  reports:
