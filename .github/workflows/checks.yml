@@ -23,7 +23,7 @@ jobs:
       - name: Build the docker-compose stack
         run: docker-compose -f docker/docker-test.yml up -d
       - name: Change permissions
-        run: sudo chmod -R 777 output/
+        run: sudo chmod -R 777 /var/lib/docker/volumes/reports/
       - name: Lint
         run: docker-compose -f docker/docker-test.yml run --rm server sh -c "npm run lint"
       - name: Run Test Backend
