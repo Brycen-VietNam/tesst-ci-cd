@@ -35,6 +35,6 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: result-artifact
-          path: output/report.html
+          path: output/
 #       docker-compose -f docker/docker-build.yml up -d --build
 #       docker-compose -f docker/docker-build.yml run --rm server sh -c "npm run migration && npm run seed"
