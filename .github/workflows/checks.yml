@@ -33,7 +33,7 @@ jobs:
         if: ${{ !cancelled() }}
         with:
           name: robot/result
-          path: robot/result/
+          path: /app/robot/result/
           retention-days: 30
 #       docker-compose -f docker/docker-build.yml up -d --build
 #       docker-compose -f docker/docker-build.yml run --rm server sh -c "npm run migration && npm run seed"
