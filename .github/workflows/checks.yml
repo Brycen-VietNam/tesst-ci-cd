@@ -35,7 +35,7 @@ jobs:
         if: ${{ !cancelled() }}
         with:
           name: robot/result
-          path: /var/lib/docker/volumes/reports/
+          path: output/
           retention-days: 30
           overwrite: true
 #       docker-compose -f docker/docker-build.yml up -d --build
