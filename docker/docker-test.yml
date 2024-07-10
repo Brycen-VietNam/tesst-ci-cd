@@ -31,5 +31,5 @@ services:
       - db
       - cache
     volumes:
-      - ./output:/app/robot/result
+      - ../output:/app/robot/result
     command: npm run start:prod
